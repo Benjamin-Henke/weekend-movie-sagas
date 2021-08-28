@@ -25,7 +25,7 @@ function AddMovie() {
     const saveMovie = (event) => {
         event.preventDefault(event);
         console.log('Saved new movie', movie);
-    }
+    } // end saveMovie
 
     return (
         <div id="addMovie">
@@ -45,22 +45,22 @@ function AddMovie() {
                     onChange={handleInputChange}
                     />
                 <label>Choose a Genre:</label>
-                <select className="genres" onChange={handleInputChange} value={this.state.value}>
+                <select className="genres" name="genre" value={movie.genre} onChange={handleInputChange}>
+                    <option value="" disabled selected hidden>Select Genre</option>
                     <option value="Adventure">Adventure</option>
                     <option value="Animated">Animated</option>
-                    <option value="Biographical">Biographical</option>
-                    <option value="Comedy">Comedy</option>
-                    <option value="Disaster">Disaster</option>
-                    <option value="Drama">Drama</option>
-                    <option value="Epic">Epic</option>
-                    <option value="Fantasy">Fantasy</option>
-                    <option value="Musical">Musical</option>
-                    <option value="Romantic">Romantic</option>
-                    <option value="Science Fiction">Science Fiction</option>
-                    <option value="Space - Opera">Space - Opera</option>
-                    <option value="Superhero">Superhero</option>
+                    <option name="Biographical">Biographical</option>
+                    <option name="Comedy">Comedy</option>
+                    <option name="Disaster">Disaster</option>
+                    <option name="Drama">Drama</option>
+                    <option name="Epic">Epic</option>
+                    <option name="Fantasy">Fantasy</option>
+                    <option name="Musical">Musical</option>
+                    <option name="Romantic">Romantic</option>
+                    <option name="Science Fiction">Science Fiction</option>
+                    <option name="Space - Opera">Space - Opera</option>
+                    <option name="Superhero">Superhero</option>
                 </select>
-                
 
                 <br />
 
