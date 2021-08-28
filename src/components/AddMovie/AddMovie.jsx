@@ -1,22 +1,51 @@
 import { useState } from 'react';
+import Select from 'react-select';
 import {useHistory} from 'react-router-dom';
 
 
 function AddMovie() {
     const history = useHistory();
 
+    const [movie, setMovie] = useState({
+        title: '',
+        url: '',
+        genre: '',
+        description: ''
+    })
+
+    const handleInputChange = (event) => {
+        setMovie({
+            // Spread-operator
+            // Handles all user inputs
+            ...movie,
+            [event.target.name]: event.target.value,
+        });
+    } // end handleInputChange
+
     const saveMovie = (event) => {
-        event.preventDefault();
-        console.log('Saved new movie');
+        event.preventDefault(event);
+        console.log('Saved new movie', movie);
     }
 
     return (
         <div id="addMovie">
             <form onSubmit={saveMovie}>
-                <input type="text" placeholder="Title" />
-                <input type="text" placeholder="Poster URL" />
+                <input 
+                    type="text" 
+                    placeholder="Title"
+                    name="title"
+                    value={movie.title}
+                    onChange={handleInputChange}
+                />
+                <input 
+                    type="text" 
+                    placeholder="Poster URL"
+                    name="url"
+                    value={movie.url}
+                    onChange={handleInputChange}
+                    />
                 <label>Choose a Genre:</label>
-                <select className="genres">
+                <select className="genres" onChange={handleInputChange} value={this.state.value}>
                     <option value="Adventure">Adventure</option>
                     <option value="Animated">Animated</option>
                     <option value="Biographical">Biographical</option>
@@ -31,10 +60,23 @@ function AddMovie() {
                     <option value="Space - Opera">Space - Opera</option>
                     <option value="Superhero">Superhero</option>
                 </select>
+                
+
                 <br />
-            <textarea id="movieDescription" placeholder="Description" rows="4" cols="65"></textarea>
-            <br />
-            <button type="submit">Save</button>
+
+                <textarea 
+                    id="movieDescription" 
+                    placeholder="Description" 
+                    name="description"
+                    value={movie.description}
+                    onChange={handleInputChange}
+                    rows="4" 
+                    cols="65">
+                </textarea>
+
+                <br />
+
+                <button type="submit">Save</button>
             </form>
             <button onClick={() => {
                 history.push('/Movie_List');
@@ -45,16 +87,3 @@ function AddMovie() {
 
 export default AddMovie;
 
-// 1	Adventure
-// 2	Animated
-// 3	Biographical
-// 4	Comedy
-// 5	Disaster
-// 6	Drama
-// 7	Epic
-// 8	Fantasy
-// 9	Musical
-// 10	Romantic
-// 11	Science Fiction
-// 12	Space - Opera
-// 13	Superhero

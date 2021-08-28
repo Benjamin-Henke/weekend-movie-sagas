@@ -58,7 +58,7 @@ We've added some movie posters in the `public/images` folder, and the database i
  > Hint : You can make a GET request for a specific movie. Remember `req.params` and `:id`?
 
 [x] TODO: The details page should have a `Back to List` button, which should bring the user to the Home/List Page
-[x] Button under each movie called 'Details'
+[x] Click image to go to details
 
 > Base functionality does not require the movie details to load correctly after refresh of the browser.
 

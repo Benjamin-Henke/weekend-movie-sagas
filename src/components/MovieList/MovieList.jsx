@@ -25,12 +25,13 @@ function MovieList() {
                     return (
                         <div key={movie.id} >
                             <h3>{movie.title}</h3>
-                            <img src={movie.poster} alt={movie.title}/>
-                            <br />
-                            <button onClick={ () => {
-                                console.log('Clicked movie:', movie.title);
-                                history.push('/details');
-                            }}>Details</button>
+                            <img 
+                                src={movie.poster} 
+                                alt={movie.title} 
+                                onClick={() => { 
+                                    console.log('Click', movie.title); 
+                                    history.push('/details');
+                                }}/> 
                         </div>
                     );
                 })}
