@@ -15,14 +15,14 @@ For this weekend challenge you'll be expanding on a movie management application
 
 ## Database Setup
 
-1. Create a database named `saga_movies_weekend`
-2. Run the queries from `database.sql` on the `saga_movies_weekend` database
+[x] Create a database named `saga_movies_weekend`
+[x] Run the queries from `database.sql` on the `saga_movies_weekend` database
 
 ## Install Dependencies
 
-1. `npm install`
-2. `npm run server`
-3. `npm run client`
+[x] `npm install`
+[x] `npm run server`
+[x] `npm run client`
 
 ## Notes
 
@@ -42,10 +42,14 @@ We've added some movie posters in the `public/images` folder, and the database i
 
 ### Home / List Page
 
-This view is completed already! It displays all of the movies in the movie database. 
+[x] This view is completed already! It displays all of the movies in the movie database. 
 
-- TODO: When a movie poster is clicked, a user should be brought to the `/details` view for that movie.
-- TODO: Have a way to get to the Add Movie Page
+[] TODO: When a movie poster is clicked, a user should be brought to the `/details` view for that movie.
+    [x] create Details component
+    [] create <Route> in App.js
+[] TODO: Have a way to get to the Add Movie Page
+    [] create AddMovie component
+    [] create <Route> in App.js
 
 ### Details Page
 
