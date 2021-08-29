@@ -9,7 +9,7 @@ function AddMovie() {
 
     const [movie, setMovie] = useState({
         title: '',
-        url: '',
+        poster: '',
         genre: '',
         description: ''
     })
@@ -55,8 +55,8 @@ function AddMovie() {
                 <input 
                     type="text" 
                     placeholder="Poster URL"
-                    name="url"
-                    value={movie.url}
+                    name="poster"
+                    value={movie.poster}
                     onChange={handleInputChange}
                     />
                 <label>Choose a Genre:</label>
