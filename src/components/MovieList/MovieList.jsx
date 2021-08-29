@@ -11,9 +11,11 @@ import MovieCard from "./MovieCard";
 function MovieList() {
     // Give hooks variables to use
     const dispatch = useDispatch();
+
+    // Pull movie library from DB
     const movies = useSelector(store => store.movies);
 
-
+    // On page load, display movies
     useEffect(() => {
         dispatch({ type: 'FETCH_MOVIES' });
     }, []);

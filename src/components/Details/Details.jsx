@@ -25,6 +25,7 @@ function Details() {
     // from Material UI
     const classes = useStyles();
 
+    // pull data from redux store depending on what movie was clicked
     const details = useSelector(store => store.details);
 
     return (

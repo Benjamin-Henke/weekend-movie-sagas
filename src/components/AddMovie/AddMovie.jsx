@@ -6,7 +6,6 @@ import '../App/App.css'
 // from Material UI
 import { makeStyles } from '@material-ui/core/styles';
 import TextField from '@material-ui/core/TextField';
-import InputLabel from '@material-ui/core/InputLabel';
 import Select from '@material-ui/core/Select';
 import MenuItem from '@material-ui/core/MenuItem';
 import FormControl from '@material-ui/core/FormControl';
@@ -28,11 +27,11 @@ const useStyles = makeStyles((theme) => ({
 
 
 function AddMovie() {
+    // give hooks variables to use
     const history = useHistory();
     const dispatch = useDispatch();
 
-    const classes = useStyles();
-
+    // save user data to be dispatched
     const [movie, setMovie] = useState({
         title: '',
         poster: '',
@@ -40,6 +39,7 @@ function AddMovie() {
         description: ''
     })
 
+    // handles the user inputs and creates 1 object
     const handleInputChange = (event) => {
         setMovie({
             // Spread-operator
@@ -49,6 +49,7 @@ function AddMovie() {
         });
     } // end handleInputChange
 
+    // function to be run when SAVE is clicked
     const saveMovie = (event) => {
         event.preventDefault(event);
         console.log('Saved new movie', movie);
@@ -67,6 +68,7 @@ function AddMovie() {
             description: ''
         })
 
+        // return back to movie list page
         history.push('/Movie_List')
     } // end saveMovie
 
@@ -138,7 +140,8 @@ function AddMovie() {
             </form>
 
 
-            {/* <form className={classes.root} onSubmit={saveMovie}>
+            {/* OLD FORM W/O MATERIAL UI, still works
+            <form className={classes.root} onSubmit={saveMovie}>
             
                 <input 
                     type="text" 

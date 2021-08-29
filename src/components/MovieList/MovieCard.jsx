@@ -30,7 +30,8 @@ export default function MovieCard( {movie}) {
     // from Material UI
     const classes = useStyles();
 
-
+    // Display movies as cards and details button
+    // Details button takes user to learn more about that movie
     return (
             <Card className={classes.root} elevation={3}>
                 <CardMedia
