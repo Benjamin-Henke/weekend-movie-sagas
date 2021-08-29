@@ -20,8 +20,7 @@ function MovieList() {
 
   
     return (
-        <div>
-            <h1>Movie List</h1>
+        <div id="movieList">
                 <Container>
                     <Grid container spacing={2}>
                             {movies.map(movie => {

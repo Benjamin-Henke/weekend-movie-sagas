@@ -2,29 +2,39 @@
   text-align: center;
 }
 
-
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
+.details {
   color: white;
 }
 
-.App-title {
-  font-size: 1.5em;
+
+a {
+  text-align: right;
+  color: antiquewhite;
+  margin: 10px;
+  float: left;
 }
 
-.App-intro {
-  font-size: large;
-}
-
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+header {
+  background-color: brown;
+  color: white;
+  height: 60px;
+  padding: 20px;
+  margin-bottom: 20px;
+  text-align: left;
 }
 
 #addMovie {
   margin: 20px;
+}
+
+#mainTitle {
+  float: left;
+  width: 85%
+}
+
+#links {
+  float: left;
+  width: 15%
 }
 
 #movieDescription {

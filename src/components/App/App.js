@@ -9,14 +9,17 @@ import Details from '../Details/Details';
 function App() {
   return (
     <div className="App">
-      <h1>The Movies Saga!</h1>
-
+     
+      
       <Router>        
-
         <div className="nav">
-          <Link to="/Movie_List">Movie List</Link>
-          <br />
-          <Link to="/Add_Movie">Add Movie</Link>
+          <header>
+            <div id="mainTitle"><h1>The Movies Saga!</h1></div>
+            <div id="links">
+              <Link to="/Movie_List" style={{ textDecoration: 'none' }}>Movie List</Link>
+              <Link to="/Add_Movie" style={{ textDecoration: 'none' }}>Add Movie</Link>
+            </div>
+          </header>
         </div>
 
 
