@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import {useState} from "react";
 import { useDispatch, useSelector } from 'react-redux';
 import { useHistory } from "react-router-dom";
 
@@ -6,11 +7,12 @@ import './MovieList.css';
 import Details from '../Details/Details';
 
 function MovieList() {
-
     // Give hooks variables to use
     const dispatch = useDispatch();
     const history = useHistory();
     const movies = useSelector(store => store.movies);
+
+    const [movieDetails, setMovieDetails] = useState('');
 
     useEffect(() => {
         dispatch({ type: 'FETCH_MOVIES' });
@@ -30,6 +32,10 @@ function MovieList() {
                                 alt={movie.title} 
                                 onClick={() => { 
                                     console.log('Click', movie.title); 
+                                    dispatch({
+                                        type: "MOVIE_DETAILS",
+                                        payload: movie
+                                    })
                                     history.push('/details');
                                 }}/> 
                         </div>
