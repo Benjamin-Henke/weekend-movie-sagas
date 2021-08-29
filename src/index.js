@@ -11,9 +11,11 @@ import createSagaMiddleware from 'redux-saga';
 import { takeEvery, put } from 'redux-saga/effects';
 import axios from 'axios';
 
+
 // Create the rootSaga generator function
 function* rootSaga() {
     yield takeEvery('FETCH_MOVIES', fetchAllMovies);
+    yield takeEvery('ADD_MOVIE', addMovie);
 }
 
 function* fetchAllMovies() {
@@ -26,7 +28,19 @@ function* fetchAllMovies() {
     } catch {
         console.log('get all error');
     }
+} // end fetchAllMovies
+
+function* addMovie(action) {
+    // add movie to the DB
+    let newMovie = action.payload;
+    try {
+        const response = yield axios.post('/api/movie', newMovie);
+        console.log(response);
         
+    } catch {
+        console.log('post error');
+        
+    }
 }
 
 // Create sagaMiddleware

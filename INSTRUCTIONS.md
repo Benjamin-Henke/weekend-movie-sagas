@@ -75,6 +75,8 @@ The Add Movie page should have the buttons:
 
 [x] `Cancel` button, which should bring the user to the Home/List Page
 [] `Save` button, which should save these inputs in the database and bring the user to the Home/List Page (which now has the new movie)
+    [x] dispatch to index
+    [x] saga takes action to save to db
 
 **Base functionality does not require being able to select more than one genre for a new movie**
 

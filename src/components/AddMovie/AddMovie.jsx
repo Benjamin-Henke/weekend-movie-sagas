@@ -29,8 +29,16 @@ function AddMovie() {
 
         // dispatch movie to redux-saga
         dispatch({
-            type: "NEW_MOVIE",
+            type: "ADD_MOVIE",
             payload: movie
+        })
+
+        // clear user inputs
+        setMovie({
+            title: '',
+            poster: '',
+            genre: '',
+            description: ''
         })
     } // end saveMovie
 
