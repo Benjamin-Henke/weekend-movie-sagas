@@ -6,6 +6,7 @@ import MovieList from '../MovieList/MovieList'
 import AddMovie from '../AddMovie/AddMovie';
 import Details from '../Details/Details';
 
+
 function App() {
   return (
     <div className="App">

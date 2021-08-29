@@ -2,9 +2,7 @@
   text-align: center;
 }
 
-.details {
-  color: white;
-}
+
 
 
 a {
@@ -17,8 +15,8 @@ a {
 header {
   background-color: brown;
   color: white;
-  height: 60px;
-  padding: 20px;
+  height: 70px;
+  padding: 25px;
   margin-bottom: 20px;
   text-align: left;
 }
@@ -27,14 +25,15 @@ header {
   margin: 20px;
 }
 
+
 #mainTitle {
   float: left;
-  width: 85%
+  width: 90%
 }
 
 #links {
   float: left;
-  width: 15%
+  width: 10%
 }
 
 #movieDescription {

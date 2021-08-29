@@ -46,6 +46,10 @@ export default function MovieCard( {movie}) {
                         dispatch({
                             type: "MOVIE_DETAILS",
                             payload: movie
+                        });
+                        dispatch({
+                            type: "MOVIE_GENRES",
+                            payload: movie
                         })
                         history.push('/Details');
                     }}>
