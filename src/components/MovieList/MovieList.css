@@ -2,3 +2,9 @@
     display : flex;
     flex-wrap: wrap;
 }
+
+.posters {
+    width: 185px;
+    height: 273px
+}
+

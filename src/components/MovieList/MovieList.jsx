@@ -2,9 +2,12 @@ import React, { useEffect } from 'react';
 import {useState} from "react";
 import { useDispatch, useSelector } from 'react-redux';
 import { useHistory } from "react-router-dom";
+import Grid from '@material-ui/core/Grid';
+import Paper from '@material-ui/core/Paper';
+import {Container} from '@material-ui/core';
 
 import './MovieList.css';
-import Details from '../Details/Details';
+
 
 function MovieList() {
     // Give hooks variables to use
@@ -21,26 +24,33 @@ function MovieList() {
   
     return (
         <main>
-            <h1>MovieList</h1>
+            <h1>Movie List</h1>
             <section className="movies">
+
+                <Grid container>
                 {movies.map(movie => {
                     return (
-                        <div key={movie.id} >
-                            <h3>{movie.title}</h3>
-                            <img 
-                                src={movie.poster} 
-                                alt={movie.title} 
-                                onClick={() => { 
-                                    console.log('Click', movie.title); 
-                                    dispatch({
-                                        type: "MOVIE_DETAILS",
-                                        payload: movie
-                                    })
-                                    history.push('/details');
-                                }}/> 
-                        </div>
+                        <Container>
+                            <Grid item key={movie.id} md={2}>
+                                <Paper>
+                                    <h4>{movie.title}</h4>
+                                    <img className="posters"
+                                        src={movie.poster}
+                                        alt={movie.title}
+                                        onClick={() => {
+                                            console.log('Click', movie.title);
+                                            dispatch({
+                                                type: "MOVIE_DETAILS",
+                                                payload: movie
+                                            })
+                                            history.push('/Details');
+                                        }} />
+                                </Paper>
+                            </Grid>
+                        </Container>
                     );
                 })}
+                </Grid>
             </section>
         </main>
 

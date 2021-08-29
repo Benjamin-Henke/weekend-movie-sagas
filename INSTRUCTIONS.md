@@ -54,6 +54,8 @@ We've added some movie posters in the `public/images` folder, and the database i
 ### Details Page
 
 [] This should show all details **including ALL genres** for the selected movie. You will need to store this data in redux!
+    [x] can pull normal detail
+    [] need genres... stuck here
 
  > Hint : You can make a GET request for a specific movie. Remember `req.params` and `:id`?
 

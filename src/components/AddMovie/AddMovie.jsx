@@ -40,6 +40,8 @@ function AddMovie() {
             genre: '',
             description: ''
         })
+
+        history.push('/Movie_List')
     } // end saveMovie
 
     return (

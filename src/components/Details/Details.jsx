@@ -5,6 +5,7 @@ function Details() {
 
     return (
         <>
+            <h1>{details.title}</h1>
             <img src={details.poster} />
             <p>{details.description}</p>
         </>
